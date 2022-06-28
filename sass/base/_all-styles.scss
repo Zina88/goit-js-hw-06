@@ -1,0 +1,88 @@
+body {
+  background-color: $white-color;
+  color: $primary-text-color;
+  font-family: $font-family-primary;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and(min-width: 480px){
+      width: $mobile;
+     }
+    
+    @media screen and (min-width: 768px) {
+      width: $tablet;
+    }
+    
+    @media screen and (min-width: 1200px) {
+      width: $desktop;
+    }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+  @media screen and(min-width: $desktop){
+  padding-top: 94px;
+  padding-bottom: 94px;
+  }
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+.section__title {
+  text-align: center;
+  color: $title-text-color;
+ 
+
+  @media screen and(max-width: 767px) {
+    @include fonts(700, 28px, 1.18, 0.03em);
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: $tablet) {
+    @include fonts(700, 28px, 1.18, 0.03em);
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    margin-bottom: 50px;
+    @include fonts(700, 36px, 1.16, 0.03em);
+  }
+}
