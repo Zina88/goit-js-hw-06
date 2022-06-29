@@ -3,11 +3,12 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 const ingredientsEl = document.querySelector('#ingredients');
 
 const elements = ingredients.map(option => {
-  const liEl = document.createElement('li');
-  liEl.textContent = option;
-  liEl.classList.add('item');
+  const itemListEl = document.createElement('li');
+  itemListEl.textContent = option;
+  // console.log(option);
+  itemListEl.classList.add('item');
 
-  return liEl;
+  return itemListEl;
 });
 
 ingredientsEl.append(...elements);
