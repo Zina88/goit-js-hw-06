@@ -8,8 +8,10 @@
 //   console.log('Elements:', itemListEl.length);
 // }
 
+const category = document.querySelector('#categories');
+console.log('Number of categories:', category.children.length);
+
 const itemEl = document.querySelectorAll('.item');
-console.log('Number of categories:', itemEl.length);
 
 const elements = [...itemEl].map(element => {
   const titleEl = element.querySelector('h2');
