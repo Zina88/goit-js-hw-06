@@ -6,7 +6,6 @@ const refs = {
 refs.input.addEventListener('input', onInputFocus);
 
 function onInputFocus(event) {
-  //   console.log(event.currentTarget.value);
   if (event.currentTarget.value === '') {
     refs.output.textContent = 'Anonymous';
   } else {
