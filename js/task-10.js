@@ -14,9 +14,9 @@ ref.destroyBtnEl.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
   const elementInList = ref.resultInnerValue.childElementCount;
-  const event = ref.inputValueEl.value;
+  const value = ref.inputValueEl.value;
 
-  for (let i = elementInList; i < +event + elementInList; i += 1) {
+  for (let i = elementInList; i < +value + elementInList; i += 1) {
     ref.resultInnerValue.insertAdjacentHTML(
       'beforeend',
       `<div style="width: ${i * 10 + 30 + 'px'};
