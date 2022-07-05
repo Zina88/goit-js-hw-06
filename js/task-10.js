@@ -12,26 +12,24 @@ const ref = {
 ref.createBtnEl.addEventListener('click', createBoxes);
 ref.destroyBtnEl.addEventListener('click', destroyBoxes);
 
-function createBoxes(amount) {
-  let elementInList = ref.resultInnerValue.childElementCount;
+function createBoxes() {
+  const elementInList = ref.resultInnerValue.childElementCount;
 
-  amount = ref.inputValueEl.value;
+  const amount = ref.inputValueEl.value;
 
-  if (elementInList !== null) {
-    for (let i = elementInList; i < +amount + elementInList; i += 1) {
-      ref.resultInnerValue.insertAdjacentHTML(
-        'beforeend',
-        `<div style="width: ${i * 10 + 30 + 'px'};
+  for (let i = elementInList; i < +amount + elementInList; i += 1) {
+    ref.resultInnerValue.insertAdjacentHTML(
+      'beforeend',
+      `<div style="width: ${i * 10 + 30 + 'px'};
           height: ${i * 10 + 30 + 'px'};
           background-color: ${getRandomHexColor()};
           ">
         </div >`
-      );
-    }
+    );
   }
-  ref.inputValueEl.value = amount;
 }
 
 function destroyBoxes() {
+  ref.inputValueEl.value = null;
   ref.resultInnerValue.innerHTML = '';
 }
